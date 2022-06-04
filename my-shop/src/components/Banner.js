@@ -5,6 +5,12 @@ const Banner = () => {
   return (
     <div className={styles.container}>
       <img src={banner} alt="banner" />
+      <div className={styles.textContainer}>
+        <h1>React Project</h1>
+        <p>
+          this is first project with <span>React.js</span>
+        </p>
+      </div>
     </div>
   );
 };
