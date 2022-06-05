@@ -15,9 +15,31 @@
 }
 .container p {
   margin: 0 25px 20px;
-  background-color: rgb(10, 145, 46);
+  background-color: #e4b430;
   width: fit-content;
   padding: 5px;
   border-radius: 5px;
+  color: #000000;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  border-top: 1px silver solid;
+}
+.counter img {
+  width: 20px;
+  height: 20px;
+  margin: 20px;
+  cursor: pointer;
+}
+.counter span {
+  background-color: #7300ff;
+  padding: 5px;
+  border-radius: 5px;
   color: #fff;
+  font-weight: bold;
+}
+.deactive {
+  opacity: 0.3;
 }

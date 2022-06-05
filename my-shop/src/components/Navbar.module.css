@@ -1,17 +1,14 @@
 .header {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  background-color: #9e9e9e;
+  background-color: #7300ff;
   align-items: center;
   padding: 0 50px;
 }
 .logo {
   width: 40px;
-  height: 40px;
   border-radius: 50%;
   padding: 10px;
-  margin: auto 0;
 }
 .list {
   display: flex;
