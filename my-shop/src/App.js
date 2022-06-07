@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -9,10 +9,10 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Switch>
-        <Route path="/products" component={Products} />
-        <Route path="/" component={LandingPage} />
-      </Switch>
+      <Routes>
+        <Route path="/products" element={<Products />} />
+        <Route path="/" element={<LandingPage />} />
+      </Routes>
       <Footer />
     </div>
   );
