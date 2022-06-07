@@ -35,7 +35,7 @@ class Card extends Component {
 
         <div className={styles.counter}>
           <img
-            className={!counter && styles.deactive}
+            className={!counter && styles.deActive}
             src={down}
             alt="arrow"
             onClick={this.downHandler}
