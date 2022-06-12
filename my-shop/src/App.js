@@ -1,20 +1,36 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
+//styles
+import styles from "./App.css";
+
+//Context
+import ProductsContextProvider from "./Context/ProductsContextProvider";
+import CardContextProvider from "./Context/CardContextProvider";
+
+//Components
+import Navbar from "./shared/Navbar";
 import Footer from "./components/Footer";
 import Products from "./components/Products";
-import LandingPage from "./components/LandingPage";
+import ProductDetails from "./components/ProductDetails";
+import ShopCart from "./components/ShopCart";
+
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Routes>
-        <Route path="/products" element={<Products />} />
-        <Route path="/" element={<LandingPage />} />
-      </Routes>
-      <Footer />
-    </div>
+    <ProductsContextProvider>
+      <CardContextProvider>
+        <div className={styles.App}>
+          <Navbar />
+          <Routes>
+            <Route path="/products" element={<Products />} />
+            <Route path="/products/:id" element={<ProductDetails />} />
+            <Route path="/*" element={<Navigate to="/products" />} />
+            <Route path="/cart" element={<ShopCart />} />
+          </Routes>
+          <Footer />
+        </div>
+      </CardContextProvider>
+    </ProductsContextProvider>
   );
 }
 

@@ -1,0 +1,52 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  padding: 0px 15px;
+  box-shadow: 0px 5px 24px rgba(9, 9, 9, 0.238);
+}
+.iconContainer {
+  position: relative;
+}
+.iconContainer span {
+  position: absolute;
+  top: -15px;
+  right: 130px;
+  background-color: #1a73e8;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  font-size: 0.75rem;
+  text-align: center;
+  font-weight: bold;
+  color: #ffffff;
+}
+.logo {
+  position: absolute;
+  top: -15px;
+  right: 130px;
+  width: 35px;
+}
+.list {
+  display: flex;
+  list-style: none;
+  margin-left: 90px;
+}
+.list li {
+  padding: 15px;
+  cursor: pointer;
+  color: #1a73e8;
+  font-weight: bold;
+}
+.list li a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+.list li a:hover {
+  color: #000000;
+}
